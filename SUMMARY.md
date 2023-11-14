@@ -1,9 +1,6 @@
 # Table of contents
 
-## Prologue
-
-* [Release Notes](README.md)
-* [Contribution Guide](prologue/contribution-guide.md)
+* [Introduction](README.md)
 
 ## Documentaion
 
@@ -27,7 +24,33 @@
 * [Components](documentaion/components/README.md)
   * [Main Components](documentaion/components/main-components/README.md)
     * [Routes](documentaion/components/main-components/routes.md)
-  * [Optional Components](documentaion/components/optional-components.md)
+    * [Requests](documentaion/components/main-components/requests.md)
+    * [Actions](documentaion/components/main-components/actions.md)
+    * [Controllers](documentaion/components/main-components/controllers.md)
+    * [Tasks](documentaion/components/main-components/tasks.md)
+    * [Models](documentaion/components/main-components/models.md)
+    * [Transformers](documentaion/components/main-components/transformers.md)
+    * [Views](documentaion/components/main-components/views.md)
+    * [Exceptions](documentaion/components/main-components/exceptions.md)
+    * [Sub Actions](documentaion/components/main-components/sub-actions.md)
+  * [Optional Components](documentaion/components/optional-components/README.md)
+    * [Commands](documentaion/components/optional-components/commands.md)
+    * [Configs](documentaion/components/optional-components/configs.md)
+    * [Events](documentaion/components/optional-components/events.md)
+    * [Factories](documentaion/components/optional-components/factories.md)
+    * [Helpers](documentaion/components/optional-components/helpers.md)
+    * [Jobs](documentaion/components/optional-components/jobs.md)
+    * [Mail](documentaion/components/optional-components/mail.md)
+    * [Middlewares](documentaion/components/optional-components/middlewares.md)
+    * [Migrations](documentaion/components/optional-components/migrations.md)
+    * [Notifications](documentaion/components/optional-components/notifications.md)
+    * [Policies](documentaion/components/optional-components/policies.md)
+    * [Repository](documentaion/components/optional-components/repository.md)
+    * [Seeders](documentaion/components/optional-components/seeders.md)
+    * [Page 3](documentaion/components/optional-components/page-3.md)
+    * [Page 2](documentaion/components/optional-components/page-2.md)
+    * [Page 1](documentaion/components/optional-components/page-1.md)
+    * [Page](documentaion/components/optional-components/page.md)
 * [Security](documentaion/security/README.md)
   * [Registration](documentaion/security/registration.md)
   * [Authentication](documentaion/security/authentication.md)
@@ -39,3 +62,8 @@
   * [Documentation](documentaion/packages/documentation.md)
   * [Localization](documentaion/packages/localization.md)
   * [Social Authentication](documentaion/packages/social-authentication.md)
+
+## Supplementary
+
+* [Release Notes](supplementary/release-notes.md)
+* [Contribution Guide](supplementary/contribution-guide.md)

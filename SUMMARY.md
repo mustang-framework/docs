@@ -5,45 +5,37 @@
 * [Release Notes](README.md)
 * [Contribution Guide](prologue/contribution-guide.md)
 
-## Architecture Concepts
+## Documentaion
 
-* [Porto](architecture-concepts/porto.md)
-* [Container](architecture-concepts/container.md)
-* [Components](architecture-concepts/components.md)
-* [Request Lifecycle](architecture-concepts/request-lifecycle.md)
-
-## Getting Started
-
-* [Installation](getting-started/installation.md)
-* [Best Practices](getting-started/best-practices.md)
-* [Customized Laravel Components](getting-started/customized-laravel-components.md)
-
-## Framework Features
-
-* [Code Generator](framework-features/code-generator.md)
-* [API Versioning](framework-features/api-versioning.md)
-* [Role Based Access Control](framework-features/role-based-access-control.md)
-* [Profiler](framework-features/profiler.md)
-* [Etag](framework-features/etag.md)
-* [Rate Limiting](framework-features/rate-limiting.md)
-
-## Components
-
-* [Main Components](components/main-components/README.md)
-  * [Routes](components/main-components/routes.md)
-* [Optional Components](components/optional-components.md)
-
-## Security
-
-* [Registration](security/registration.md)
-* [Authentication](security/authentication.md)
-* [Authorization](security/authorization.md)
-* [Email Verification](security/email-verification.md)
-* [Password Reset](security/password-reset.md)
-* [Hash ID](security/hash-id.md)
-
-## Packages
-
-* [Documentation](packages/documentation.md)
-* [Localization](packages/localization.md)
-* [Social Authentication](packages/social-authentication.md)
+* [Architecture Concepts](documentaion/architecture-concepts/README.md)
+  * [Porto](documentaion/architecture-concepts/porto.md)
+  * [Container](documentaion/architecture-concepts/container.md)
+  * [Components](documentaion/architecture-concepts/components.md)
+  * [Request Lifecycle](documentaion/architecture-concepts/request-lifecycle.md)
+* [Getting Started](documentaion/getting-started/README.md)
+  * [Installation](documentaion/getting-started/installation.md)
+  * [Best Practices](documentaion/getting-started/best-practices.md)
+  * [Customized Laravel Components](documentaion/getting-started/customized-laravel-components.md)
+* [Framework Features](documentaion/framework-features/README.md)
+  * [Code Generator](documentaion/framework-features/code-generator.md)
+  * [Untitled](documentaion/framework-features/untitled.md)
+  * [API Versioning](documentaion/framework-features/api-versioning.md)
+  * [Role Based Access Control](documentaion/framework-features/role-based-access-control.md)
+  * [Profiler](documentaion/framework-features/profiler.md)
+  * [Etag](documentaion/framework-features/etag.md)
+  * [Rate Limiting](documentaion/framework-features/rate-limiting.md)
+* [Components](documentaion/components/README.md)
+  * [Main Components](documentaion/components/main-components/README.md)
+    * [Routes](documentaion/components/main-components/routes.md)
+  * [Optional Components](documentaion/components/optional-components.md)
+* [Security](documentaion/security/README.md)
+  * [Registration](documentaion/security/registration.md)
+  * [Authentication](documentaion/security/authentication.md)
+  * [Authorization](documentaion/security/authorization.md)
+  * [Email Verification](documentaion/security/email-verification.md)
+  * [Password Reset](documentaion/security/password-reset.md)
+  * [Hash ID](documentaion/security/hash-id.md)
+* [Packages](documentaion/packages/README.md)
+  * [Documentation](documentaion/packages/documentation.md)
+  * [Localization](documentaion/packages/localization.md)
+  * [Social Authentication](documentaion/packages/social-authentication.md)

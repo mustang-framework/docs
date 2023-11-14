@@ -29,7 +29,8 @@
 
 ## Components
 
-* [Main Components](components/main-components.md)
+* [Main Components](components/main-components/README.md)
+  * [Routes](components/main-components/routes.md)
 * [Optional Components](components/optional-components.md)
 
 ## Security

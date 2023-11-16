@@ -15,7 +15,6 @@
   * [Customized Laravel Components](documentaion/getting-started/customized-laravel-components.md)
 * [Framework Features](documentaion/framework-features/README.md)
   * [Code Generator](documentaion/framework-features/code-generator.md)
-  * [Untitled](documentaion/framework-features/untitled.md)
   * [API Versioning](documentaion/framework-features/api-versioning.md)
   * [Role Based Access Control](documentaion/framework-features/role-based-access-control.md)
   * [Profiler](documentaion/framework-features/profiler.md)

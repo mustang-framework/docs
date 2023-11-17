@@ -94,7 +94,7 @@ php artisan mustang:apidoc
 
 If you get an error (`apidoc not found`),
 
-1. [Publish the configs](broken-reference)
+1. [Publish the configs](documentation.md#publishing-configs)
 2. Edit the `executable` path to **`$(npm bin)/apidoc`** or to however you access the `apidoc` tool on your machine.
 
 ```php
@@ -182,12 +182,12 @@ Config file will be copied to `app/Ship/Configs/vendor-documentation.php`
 
 #### Change the Documentation URL's[​](https://apiato.io/docs/pacakges/documentation#change-the-documentations-urls) <a href="#change-the-documentations-urls" id="change-the-documentations-urls"></a>
 
-[Publish the configs](broken-reference) and change `types.public.url` & `types.private.url`.
+[Publish the configs](documentation.md#publishing-configs) and change `types.public.url` & `types.private.url`.
 
 #### Private Documentation Protection[​](https://apiato.io/docs/pacakges/documentation#private-docs-protection) <a href="#private-docs-protection" id="private-docs-protection"></a>
 
 By default, this feature is **disabled** in the local environment and **enabled** in production.\
-To change this behaviour [Publish the configs](broken-reference) and change `protect-private-docs`.
+To change this behaviour [Publish the configs](documentation.md#publishing-configs) and change `protect-private-docs`.
 
 The private documentation route is protected with the `auth:web` middleware. You can grant users access to the protected docs by updating `access-private-docs-roles` & `access-private-docs-permission` values in documentation config. By default, users need `access-private-docs` permission to access private docs.
 

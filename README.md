@@ -25,3 +25,15 @@ Please do not forget that before starting to work with **Mustang** you should ma
 
 Great news! You are now ready to work with Mustang effortlessly.
 
+
+
+### Recommended Books
+
+* [Domain-Driven Laravel: Learn to Implement Domain-Driven Design Using Laravel](https://www.amazon.com/Domain-Driven-Laravel-Learn-Implement-Design/dp/1484260228)
+* [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=bmx\_dp\_hgfmzmbn\_sccl\_2\_7/134-8047698-5010414?pd\_rd\_w=ttIlS\&content-id=amzn1.sym.1ad6a7e4-3d81-4546-a32b-8902c9f127c5\&pf\_rd\_p=1ad6a7e4-3d81-4546-a32b-8902c9f127c5\&pf\_rd\_r=KHKJEBM0MDZ7CWFAZ3YF\&pd\_rd\_wg=nVTmm\&pd\_rd\_r=48484ff4-e97b-4f65-a7e6-d49bdea0abfb\&pd\_rd\_i=0321125215\&psc=1)
+* [Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy](https://www.amazon.com/Learning-Domain-Driven-Design-Aligning-Architecture/dp/1098100131)
+* [Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)
+* [Laravel Beyond Crud](https://laravel-beyond-crud.com/)
+
+| <img src=".gitbook/assets/image (6).png" alt="" data-size="original"> | <img src=".gitbook/assets/image (5).png" alt="" data-size="original"> | <img src=".gitbook/assets/image (4).png" alt="" data-size="original"> | <img src=".gitbook/assets/image (7).png" alt="" data-size="original"> | <img src=".gitbook/assets/image (8).png" alt="" data-size="original"> |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |

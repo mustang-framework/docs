@@ -110,7 +110,7 @@ app
 
 The following diagram illustrates the registration flow of policies in the above folder structure:
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Helper Methods[​](https://apiato.io/docs/components/optional-components/policies#helper-methods) <a href="#helper-methods" id="helper-methods"></a>
 

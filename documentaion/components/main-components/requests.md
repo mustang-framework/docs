@@ -4,7 +4,7 @@
 
 To generate new requests you may use the `mustang:generate:request` interactive command:
 
-```
+```bash
 php artisan mustang:generate:request
 ```
 
@@ -45,7 +45,7 @@ app
 
 ### Code Example[​](https://apiato.io/docs/components/main-components/requests#code-example) <a href="#code-example" id="code-example"></a>
 
-```
+```bash
 use App\Ship\Parents\Requests\Request as ParentRequest;
 
 class DemoRequest extends ParentRequest
@@ -76,7 +76,7 @@ Validation rules are defined within the respective Request class. These rules ar
 
 Here's an example of a Request class with validation rules:
 
-```
+```bash
 use App\Ship\Parents\Requests\Request as ParentRequest;
 
 class RegisterUserRequest extends ParentRequest
@@ -95,7 +95,7 @@ class RegisterUserRequest extends ParentRequest
 
 And here's how you would use this Request class within a Controller:
 
-```
+```bash
 public function __invoke(RegisterUserRequest $request)
 {
     $user = app(RegisterUserAction::class)->run($request);
@@ -114,7 +114,7 @@ Mustang introduces new properties to the Request Class that enhance its function
 
 The `access` property allows you to define Roles and Permissions that can access a specific endpoint. It's used by the `hasAccess` method to check if a user has the required Roles and Permissions to use that endpoint.
 
-```
+```bash
 class DemoRequest extends ParentRequest
 {
     protected array $access = [
@@ -133,7 +133,7 @@ class DemoRequest extends ParentRequest
 
 You can also use the `array notation` or `pipe` to define multiple Roles and Permissions.
 
-```
+```bash
 class DemoRequest extends ParentRequest
 {
     protected $access = [
@@ -145,9 +145,9 @@ class DemoRequest extends ParentRequest
 }
 ```
 
-Tip
-
+{% hint style="info" %}
 If there's no need to set any roles or permissions, you can simply set the `permissions` or `roles` property to an empty string `''`, an empty array `[]`, or `null`.
+{% endhint %}
 
 #### decode[​](https://apiato.io/docs/components/main-components/requests#decode) <a href="#decode" id="decode"></a>
 
@@ -155,7 +155,7 @@ The `decode` property is used to handle the decoding of Hashed IDs from the inco
 
 When you enable the [Hash ID](https://apiato.io/docs/security/hash-id) feature, your application can receive Hashed IDs from users. These Hashed IDs need to be decoded before they can be effectively validated. Mustang facilitates this process by providing a property in its Requests class where you can specify which Hashed IDs need to be decoded. This ensures that the validation procedure seamlessly integrates with Hashed IDs.
 
-```
+```bash
 class DemoRequest extends ParentRequest
 {
     protected array $decode = [
@@ -177,7 +177,7 @@ The `urlParameters` property simplifies the process of applying validation rules
 
 By default, Laravel doesn't provide validation for URL parameters (`/stores/999/items`). However, by using the `urlParameters` property, you can enable validation for these parameters. By specifying the desired URL parameters within this property, you not only enable validation but also gain direct access to these parameters from the Request object.
 
-```
+```bash
 // URL: /stores/{id}/items
 // GET /stores/999/items
 class DemoRequest extends ParentRequest
@@ -201,7 +201,7 @@ class DemoRequest extends ParentRequest
 
 The `check` method is used to authorize the user to access the endpoint. It accepts an array of methods names that will be called to check if the user has access or not. Each of those methods must return a boolean. Take a look at the following example:
 
-```
+```bash
 use App\Ship\Parents\Requests\Request as ParentRequest;
 
 class DemoRequest extends ParentRequest
@@ -227,16 +227,16 @@ Here we are passing the the `hasAccess`, `isOwner` and `isKing` methods to the `
 
 So in the above example, the call to the `check` method will be translated to:
 
-```
+```bash
 return ($this->hasAccess() || $this->isOwner()) && $this->isKing();
 ```
 
 And if the result of this operation is `true` then the user will be authorized to access the endpoint.
 
-Note
-
-* `hasAccess` method is a [built-in authorization method](https://apiato.io/docs/components/main-components/requests#hasaccess).
-* `isOwner` and `isKing` methods are [custom authorization methods](https://apiato.io/docs/components/main-components/requests#custom-authorize-methods)
+{% hint style="info" %}
+* `hasAccess` method is a [built-in authorization method](requests.md#hasaccess).
+* `isOwner` and `isKing` methods are [custom authorization methods](requests.md#custom-authorize-methods)
+{% endhint %}
 
 #### hasAccess[​](https://apiato.io/docs/components/main-components/requests#hasaccess) <a href="#hasaccess" id="hasaccess"></a>
 
@@ -248,7 +248,7 @@ The `sanitizeInput` method is employed to cleanse request data before its utiliz
 
 Particularly useful for `PATCH` requests, where you may want to submit only the fields intended for modification to minimize traffic or perform partial updates to the corresponding database resource. Traditional checks for the presence or absence of specific keys in the request can lead to extensive `if` blocks, such as:
 
-```
+```php
 if ($request->has('data.name')) {
    $data['name'] = $request->input('data.name');
 }
@@ -260,7 +260,7 @@ For streamlining data sanitization when using `application/json` instead of `x-w
 
 Consider the following request:
 
-```
+```json
 {
   "data": {
     "name": "Demo",
@@ -278,7 +278,7 @@ Consider the following request:
 
 The `sanitizeInput` method enables you to specify a list of fields, employing dot notation, to be accessed and extracted from the request.
 
-```
+```php
 $data = $request->sanitizeInput([
     'data.description',
     'data.is_private',
@@ -291,7 +291,7 @@ $data = $request->sanitizeInput([
 
 The extracted data will appear as follows:
 
-```
+```json
 [
   "data" => [
     "description" => "Some description"
@@ -309,7 +309,7 @@ Note that `email` is excluded from the sanitized array, as it was absent in the 
 
 You can also assign default values during the data sanitization process:
 
-```
+```php
 $sanitizedData = $request->sanitizeInput([
     'name' => 'John', // If name is not provided, the default value will be set
     'product.company.address' => 'Somewhere in the world', // dot notation is supported
@@ -324,7 +324,7 @@ The `getInputByKey` method retrieves data from the `request` by specifying the f
 
 Consider the following request:
 
-```
+```json
 {
   "id": "XbPW7awNkzl83LD6"
 }
@@ -334,7 +334,7 @@ While `$request->input('id')` would return `"XbPW7awNkzl83LD6"`, `$request->getI
 
 Moreover, you can set a `default` value to be returned if the key is absent or unset, like this:
 
-```
+```php
 $request->getInputByKey('data.name', 'Undefined')
 ```
 
@@ -344,7 +344,7 @@ In certain cases, you might need to remap input from the request to different fi
 
 Consider the following request:
 
-```
+```json
 {
   "data": {
     "name": "John Doe"
@@ -356,7 +356,7 @@ However, for processing purposes, you require the `username` field instead of `d
 
 You can use the helper as follows:
 
-```
+```php
 $request->mapInput([
     'data.name' => 'username',
 ]);
@@ -364,7 +364,7 @@ $request->mapInput([
 
 The resulting structure would be:
 
-```
+```json
 {
   "username": "John Doe"
 }
@@ -372,7 +372,7 @@ The resulting structure would be:
 
 And you can access the value as follows:
 
-```
+```php
 $request->input('username');
 ```
 
@@ -380,7 +380,7 @@ $request->input('username');
 
 The `injectData` method allows you to inject data into the request. This can be particularly helpful during testing when you wish to provide data directly to the request instead of sending it through the request body.
 
-```
+```php
 $request = RegisterUserRequest::injectData($data);
 ```
 
@@ -388,7 +388,7 @@ $request = RegisterUserRequest::injectData($data);
 
 The `withUrlParameters` method enables you to inject URL parameters into the request. This is especially useful when you need to include properties in the request that are not part of the request body but are required for the request to be processed. This method is often used in conjunction with the `injectData` method.
 
-```
+```php
 $request = RegisterUserRequest::injectData($data)
     ->withUrlParameters(['id' => 123]);
 ```
@@ -399,7 +399,7 @@ The recommended approach for adding custom authorization functions is by using a
 
 For instance, let's create an `IsAuthorTrait` Trait with a single method named `isAuthor` to determine if the current user holds the role of an author.
 
-```
+```php
 trait IsAuthorTrait
 {
     public function isAuthor(): bool
@@ -411,7 +411,7 @@ trait IsAuthorTrait
 
 Subsequently, you can apply the `IsAuthorTrait` Trait to a Request class, allowing the utilization of the `isAuthor` function within the authorization process.
 
-```
+```php
 use App\Ship\Parents\Requests\Request as ParentRequest;
 
 class DemoRequest extends ParentRequest
@@ -433,7 +433,7 @@ class DemoRequest extends ParentRequest
 
 To grant certain Roles access to all endpoints within the system without the need to define the role in each Request object, you can follow this approach. This is particularly beneficial when you want to provide unrestricted access to users with the `admin` role. To implement this, define the relevant roles in `app/Ship/Configs/mustang.php` as shown below:
 
-```
+```php
 'requests' => [
     'allow-roles-to-access-all-routes' => ['admin'],
 ],
@@ -447,9 +447,9 @@ To enforce the `accept: application/json` header, navigate to the `app/Ship/Conf
 
 Conversely, if you wish to allow users to skip this header, set `force-accept-header` to `false`.
 
-Info
-
+{% hint style="info" %}
 Forcing the accept header is disabled by default.
+{% endhint %}
 
 ### Etag[​](https://apiato.io/docs/components/main-components/requests#etag) <a href="#etag" id="etag"></a>
 

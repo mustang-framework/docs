@@ -4,13 +4,13 @@ Tasks are specialized classes that hold shared business logic, fostering code re
 
 To generate new tasks you may use the `mustang:generate:task` interactive command:
 
-```
+```bash
 php artisan mustang:generate:task
 ```
 
 Additionally, to retrieve a list of the existing tasks in your Mustang application, use the `mustang:list:tasks` command.
 
-```
+```bash
 php artisan mustang:list:tasks
 ```
 
@@ -40,7 +40,7 @@ app
 
 ### Code Example[​](https://apiato.io/docs/components/main-components/tasks#code-example) <a href="#code-example" id="code-example"></a>
 
-```
+```php
 use ...
 use App\Ship\Parents\Tasks\Task as ParentTask;
 

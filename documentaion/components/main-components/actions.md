@@ -4,13 +4,13 @@ Actions serve as the embodiment of the application's Use Cases, encapsulating th
 
 To generate new actions you may use the `mustang:generate:action` interactive command:
 
-```
+```bash
 php artisan mustang:generate:action
 ```
 
 Additionally, to retrieve a list of the existing actions in your Mustang application, use the `Mustang:list:actions` command.
 
-```
+```bash
 php artisan mustang:list:actions
 ```
 
@@ -41,7 +41,7 @@ app
 
 ### Code Example[​](https://apiato.io/docs/components/main-components/actions#code-example) <a href="#code-example" id="code-example"></a>
 
-```
+```php
 use ...
 use App\Ship\Parents\Actions\Action as ParentAction;
 
@@ -61,7 +61,7 @@ class DemoAction extends ParentAction
 
 **Calling multiple Tasks**[**​**](https://apiato.io/docs/components/main-components/actions#calling-multiple-tasks)
 
-```
+```php
 use ...
 use App\Ship\Parents\Actions\Action as ParentAction;
 

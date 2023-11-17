@@ -4,7 +4,7 @@
 
 To generate new models you may use the `mustang:generate:model` interactive command:
 
-```
+```bash
 php artisan mustang:generate:model
 ```
 
@@ -41,7 +41,7 @@ Models are defined exactly as you would define them in Laravel.
 
 If your model does not extend the `App\Ship\Parents\Models\Model` or the `App\Ship\Parents\Models\UserModel` class, it is essential to incorporate the `ModelTrait` trait into your model. By doing so, your model will benefit from various functionalities provided by the trait, such as hash ids and other features necessary for proper integration with the framework.
 
-```
+```php
 use Mustang\Core\Traits\ModelTrait;
 
 class Demo

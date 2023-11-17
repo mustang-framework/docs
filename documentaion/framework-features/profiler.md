@@ -17,7 +17,7 @@ To customize and manage the profiler response, you'll need to make adjustments i
 
 The following is an example of the profiler response:
 
-```
+```jsdoc
 {
     "_profiler": {
         "__meta": {

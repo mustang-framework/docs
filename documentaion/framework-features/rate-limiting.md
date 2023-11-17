@@ -2,9 +2,9 @@
 
 Mustang uses [Laravel Rate Limiting](https://laravel.com/docs/rate-limiting) feature to protect your API from abuse and to ensure stability.
 
-Note
-
+{% hint style="info" %}
 This feature is only applied to API requests, and not to web requests and is _enabled_ by default.
+{% endhint %}
 
 ### How it works[​](https://apiato.io/docs/framework-features/rate-limiting#how-it-works) <a href="#how-it-works" id="how-it-works"></a>
 

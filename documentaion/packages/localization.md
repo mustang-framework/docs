@@ -108,9 +108,9 @@ The overall workflow of the Middleware is as follows: 1) Extract the `Accept-Lan
 
 By default, all the Container translation files are namespaced as the camelCase of its Section name + `@` + camelCase of its Container name.
 
-Note
-
+{% hint style="info" %}
 Translation files in **Ship** folder are exception to this and will be namespaced with the word "**ship**" instead of section name, e.g. `__('ship::notifications.welcome')`
+{% endhint %}
 
 ### Example[​](https://apiato.io/docs/pacakges/localization#example) <a href="#example" id="example"></a>
 

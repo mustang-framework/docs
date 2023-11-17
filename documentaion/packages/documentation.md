@@ -16,9 +16,9 @@ Mustang makes writing and generating documentation very easy with the `php artis
 composer require mustang/documentation-generator-container
 ```
 
-Tip
-
-This container is installed by default with an Mustang fresh installation.
+{% hint style="info" %}
+This container is installed by default with a Mustang fresh installation.
+{% endhint %}
 
 ### Usage[​](https://apiato.io/docs/pacakges/documentation#usage) <a href="#usage" id="usage"></a>
 

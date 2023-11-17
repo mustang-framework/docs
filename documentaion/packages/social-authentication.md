@@ -42,9 +42,9 @@ Optionally add this to your user transformer to add social auth fields to your u
     ]
 ```
 
-Tip
-
+{% hint style="success" %}
 It is recommended to have 2 separate transformers (private & public) for the User e.g. `UserPrivateProfileTransformer` & `UserTransformer` and add above data to the private transformer not the public one. By doing it this way you can hide your User's personal data.
+{% endhint %}
 
 ### Default Supported Auth Provide[​](https://apiato.io/docs/pacakges/social-authentication#default-supported-auth-provide) <a href="#default-supported-auth-provide" id="default-supported-auth-provide"></a>
 
@@ -125,13 +125,15 @@ Example Google Response:
 }
 ```
 
-Tip
+{% hint style="info" %}
+
 
 For testing purposes Mustang provides two web endpoints
 
 1. `/auth/{provider}/redirect` which act as a client (step 3 above)
 2. `/auth/{provider}/callback` which you can use in your provider's developer dashboard for callback url.\
    Use those endpoints from your browser _(replace the provider with any of the supported providers `facebook`, `twitter`,...)_ to get the `oauth` info and user data respectively.
+{% endhint %}
 
 ### Social Authentication Container Customization[​](https://apiato.io/docs/pacakges/social-authentication#social-auth-customization) <a href="#social-auth-customization" id="social-auth-customization"></a>
 

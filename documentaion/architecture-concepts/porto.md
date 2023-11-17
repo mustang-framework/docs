@@ -17,17 +17,17 @@ The Containers layer encompasses all the application's business logic code and c
 
 A Section refers to a collection of related Containers. These Containers can represent various entities such as services (either micro or larger in scale) or subsystems within the main system.
 
-Note
-
+{% hint style="info" %}
 A Section is not allowed to directly communicate with another Section, except via Events or Commands.
+{% endhint %}
 
 **Container**[**​**](https://apiato.io/docs/architecture-concepts/porto#container)
 
 A Container represents a cohesive set of related functionalities. It can be a specific feature or a wrapper around a RESTful API resource.
 
-Note
-
+{% hint style="info" %}
 A Container is allowed to depend on other Containers in the same Section.
+{% endhint %}
 
 #### Ship[​](https://apiato.io/docs/architecture-concepts/porto#ship) <a href="#ship" id="ship"></a>
 

@@ -20,7 +20,7 @@ Before you begin working with Mustang, we kindly request you to read these short
 * [Porto Documentation](https://github.com/Mahmoudz/Porto)
 
 {% hint style="info" %}
-Please do not forget that before starting to work with **Mustang** you should master the [architecture concepts.](documentaion/architecture-concepts/) You can not understand **Mustang** if you are not familiar with [Porto](documentaion/architecture-concepts/porto.md).
+Please do not forget that before starting to work with **Mustang** you should master the [architecture concepts.](documentaion/architecture-concepts/) To truly understand Mustang, it's important to be familiar with [Porto](documentaion/architecture-concepts/porto.md).
 {% endhint %}
 
 Great news! You are now ready to work with Mustang effortlessly.

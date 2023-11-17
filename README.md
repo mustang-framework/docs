@@ -1,5 +1,7 @@
 ---
 description: What is Mustang and how to work with.
+cover: .gitbook/assets/lectora-benefits-for-elearning-development-infographic1-1.jpg
+coverY: 0
 ---
 
 # Introduction

@@ -63,7 +63,7 @@ class UserTransformer extends ParentTransformer
 
 ### Including Relationships[​](https://apiato.io/docs/components/main-components/transformers#including-relationships) <a href="#including-relationships" id="including-relationships"></a>
 
-You can include model relationships for complex data structures using the `include` query parameter. These relationships can be included in the response either [per API consumer request](https://apiato.io/docs/components/main-components/transformers#include-per-api-consumer-request) or [by default](https://apiato.io/docs/components/main-components/transformers#include-by-default). The `include` parameter can be used on any endpoint that has [relationships defined](https://apiato.io/docs/components/main-components/transformers#defining-relationships) in its transformer.
+You can include model relationships for complex data structures using the `include` query parameter. These relationships can be included in the response either [per API consumer request](transformers.md#include-per-api-consumer-request) or [by default](transformers.md#include-by-default). The `include` parameter can be used on any endpoint that has [relationships defined](transformers.md#defining-relationships) in its transformer.
 
 #### Defining Relationships[​](https://apiato.io/docs/components/main-components/transformers#defining-relationships) <a href="#defining-relationships" id="defining-relationships"></a>
 
@@ -363,6 +363,8 @@ The `DataArraySerializer` is handy because it allows space for `meta` data (like
 }
 ```
 
+{% hint style="info" %}
 Further Reading
 
-For more detailed information, please refer to [Fractal](https://fractal.thephpleague.com/transformers/) and [Laravel Fractal Wrapper](https://github.com/spatie/laravel-fractal) documentations.
+For more detailed information, please refer to [Fractal](https://fractal.thephpleague.com/transformers/) and [Laravel Fractal Wrapper](https://github.com/spatie/laravel-fractal) documentation.
+{% endhint %}

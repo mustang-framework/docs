@@ -1,6 +1,6 @@
 # Container
 
-[Containers](https://github.com/Mahmoudz/Porto#containers) are at the core of Mustang. Within Containers, you'll find the application-specific business logic, encompassing all the features and functionalities of your application. This is where you'll spend almost all of your time, whether it's developing new features or maintaining existing ones.
+[Containers](https://github.com/Mahmoudz/Porto#containers) (Domains in. DDD) are at the core of **Mustang**. Within Containers, you'll find the application-specific business logic, encompassing all the features and functionalities of your application. This is where you'll spend almost all of your time, whether it's developing new features or maintaining existing ones.
 
 A fundamental advantage of Mustang is its ability to simplify complex problems by breaking them down into smaller, more manageable Containers. Each Container is thoughtfully designed to encapsulate a specific piece of functionality, which, in turn, makes development, testing, and maintenance more accessible.
 

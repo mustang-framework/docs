@@ -2,20 +2,67 @@
 
 ### Your First Mustang Project
 
-Before creating your first Mustang project, you should ensure that your local machine has PHP and [Composer](https://getcomposer.org/) installed. If you are developing on macOS, PHP and Composer can be installed via [Homebrew](https://brew.sh/).
+Before creating your first **Mustang** project, you should ensure that your local machine has PHP and [Composer](https://getcomposer.org/) installed. If you are developing on macOS, PHP and Composer can be installed via [Homebrew](https://brew.sh/).
 
-After you have installed PHP and Composer, you may create a new Mustang project via the Composer create-project command:
+After you have installed PHP and Composer, you may create a new **Mustang** project via the Composer create-project command:
 
 ```bash
 composer create-project mustang/mustang example-app
 ```
 
-### Development Environment Setup
+### Easy Start
 
-You can run Mustang in any environment that you can run Laravel.
+Everything starts with `APP_URL` variable in your `.env file.`By default, **Mustang** uses `api` as a subdomain (see `API_URL` in `.env` file) for all endpoints so starting with `localhost` or `php artisan serve` is a little tricky and full of trouble. Starting with a virtual host is highly recommended in web servers such as Apache or Nginx. See the [Deployment](https://laravel.com/docs/10.x/deployment) part in the official Laravel documentation. Don't worry, This part is completely customizable too. See [Subdomain and API Version Prefix](installation.md#subdomain-and-api-version-prefix).
+
+
 
 {% hint style="info" %}
-tip Visit [Laravel Installation](https://laravel.com/docs/installation#laravel-and-docker) for more details.
+Please note that Apiato is out of the box ready to work with different subdomains like: `admin.mustang.test`, `accounting.mustang.test and etc.`
+{% endhint %}
+
+**Minimum** Nginx Virtual Host file:
+
+```json
+server {
+    listen 80;
+    listen [::]:80;
+    server_name mustang.test api.mustang.test;
+    root /home/aboozar/www/mustang.test/public;
+ 
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-Content-Type-Options "nosniff";
+ 
+    index index.php;
+ 
+    charset utf-8;
+ 
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+ 
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+ 
+    error_page 404 /index.php;
+ 
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+ 
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}
+```
+
+### Development Environment Setup
+
+You can run **Mustang** in any environment that you can run Laravel.
+
+{% hint style="info" %}
+Visit [Laravel Installation](https://laravel.com/docs/installation#laravel-and-docker) for more details.
 {% endhint %}
 
 ### Initial Configuration
@@ -93,11 +140,11 @@ Mustang should always be served out of the root of the "web directory" configure
 
 #### Subdomain and API Version Prefix <a href="#subdomain-and-api-version-prefix" id="subdomain-and-api-version-prefix"></a>
 
-By default, Mustang uses `api` as a subdomain for all endpoints and adds only the API version as a prefix, resulting in URLs like \``` api.mustang.test/v1` ``. However, you can change this behavior.
+By default, **Mustang** uses `api` as a subdomain for all endpoints and adds only the API version as a prefix, resulting in URLs like \``` api.mustang.test/v1` ``. However, you can change this behavior.
 
 For example, if you'd like to achieve URLs like \``` mustang.test/api/` ``, follow these steps:
 
-1. Open your `.env` file and modify the API domain by updating the `API_URL` value from \``http://api.mustang.test``` ` to `http://mustang.test` `` to remove the subdomain.
+1. Open your `.env` file and modify the API domain by updating the `API_URL` value from \``` http://api.mustang.test` to `http://mustang.test` `` to remove the subdomain.
 2. In the `app/Ship/Configs/mustang.php` configuration file:
    * Set the `prefix` to `api/`.
    * Set `enable_version_prefix` to `false`.

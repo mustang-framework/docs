@@ -4,7 +4,7 @@
 
 To generate new routes you may use the `mustang:generate:route` interactive command:
 
-```
+```bash
 php artisan mustang:generate:route
 ```
 
@@ -16,7 +16,7 @@ Read [**Porto SAP Documentation (#Routes)**](https://github.com/Mahmoudz/Porto#d
 
 * All API Routes:
   * MUST be placed in the `app/Containers/{Section}/{Container}/UI/API/Routes` directory.
-  * MUST follow a specific [naming convention](https://apiato.io/docs/components/main-components/routes#api-routes).
+  * MUST follow a specific [naming convention](routes.md#api-routes).
 * All Web Routes MUST be placed in the `app/Containers/{Section}/{Container}/UI/WEB/Routes` directory.
 * Each Route file MUST contain only one Route.
 
@@ -82,7 +82,7 @@ By following to this naming convention, the endpoint inside the specified route 
 
 ### Public & Private Routes[​](https://apiato.io/docs/components/main-components/routes#public--private-routes) <a href="#public--private-routes" id="public--private-routes"></a>
 
-Mustang supports two types of endpoints, `Public` and `Private`, out of the box. Maintaining this distinction enables the generation of separate documentations for each type, ensuring that your internal API remains private and secure. This feature can be configured through the [Documentation Generator](https://apiato.io/docs/pacakges/documentation) package.
+Mustang supports two types of endpoints, `Public` and `Private`, out of the box. Maintaining this distinction enables the generation of separate documentations for each type, ensuring that your internal API remains private and secure. This feature can be configured through the [Documentation Generator](broken-reference) package.
 
 **Public Routes:**[**​**](https://apiato.io/docs/components/main-components/routes#public-routes)
 

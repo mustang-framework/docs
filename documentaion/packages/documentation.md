@@ -8,7 +8,7 @@ Mustang makes writing and generating documentation very easy with the `php artis
 
 * Install [ApiDocJs](https://apidocjs.com/) in the project directory
   * (`npm install apidoc`)
-* (Recommended) read the [Routes](https://apiato.io/docs/components/main-components/routes) page first.
+* (Recommended) read the [Routes](../components/main-components/routes.md) page first.
 
 ### Installation[​](https://apiato.io/docs/pacakges/documentation#installation) <a href="#installation" id="installation"></a>
 
@@ -94,10 +94,10 @@ php artisan mustang:apidoc
 
 If you get an error (`apidoc not found`),
 
-1. [Publish the configs](https://apiato.io/docs/pacakges/documentation#publishing-configs)
+1. [Publish the configs](broken-reference)
 2. Edit the `executable` path to **`$(npm bin)/apidoc`** or to however you access the `apidoc` tool on your machine.
 
-```
+```php
     /*
     |--------------------------------------------------------------------------
     | Executable
@@ -113,7 +113,7 @@ If you get an error (`apidoc not found`),
 
 #### Visit Documentation URL's[​](https://apiato.io/docs/pacakges/documentation#visit-docs-urls) <a href="#visit-docs-urls" id="visit-docs-urls"></a>
 
-Visit documentation URL's as shown in your terminal:
+Visit documentation URLs as shown in your terminal:
 
 * Public (external) API at http://mustang.test/docs.
 * Private (internal) API at http://mustang.test/docs/private.
@@ -124,11 +124,11 @@ Every time you change the DocBlock of a Route file you need to run the `ustang:a
 
 #### Shared Response[​](https://apiato.io/docs/pacakges/documentation#shared-response) <a href="#shared-response" id="shared-response"></a>
 
-You can use shared responses to update the documentation faster, with less outdated responses and prevent duplicating the responses between routes.
+You can use shared responses to update the documentation faster, with fewer outdated responses and prevent duplicating the responses between routes.
 
 Example: `_user.v1.public.php` will contain all responses (single, multiple...) of the User:
 
-```
+```json
 /**
  * @apiDefine UserSuccessSingleResponse
  * @apiSuccessExample {json} Success-Response:
@@ -172,7 +172,7 @@ Config file will be copied to `app/Ship/Configs/vendor-documentation.php`
 4. Update `section_name` & `html_files` in container configs
 5. Update `apidoc.private.json` & `apidoc.public.json` files in `ApiDocJs/Configs` and fix the `filename`
 
-```
+```json
 {
     "header": {
         "filename": "Containers/NEW_SECTION_NAME/Documentation/UI/WEB/Views/documentation/header.md"
@@ -180,28 +180,28 @@ Config file will be copied to `app/Ship/Configs/vendor-documentation.php`
 }
 ```
 
-#### Change the Documentations URL's[​](https://apiato.io/docs/pacakges/documentation#change-the-documentations-urls) <a href="#change-the-documentations-urls" id="change-the-documentations-urls"></a>
+#### Change the Documentation URL's[​](https://apiato.io/docs/pacakges/documentation#change-the-documentations-urls) <a href="#change-the-documentations-urls" id="change-the-documentations-urls"></a>
 
-[Publish the configs](https://apiato.io/docs/pacakges/documentation#publishing-configs) and change `types.public.url` & `types.private.url`.
+[Publish the configs](broken-reference) and change `types.public.url` & `types.private.url`.
 
 #### Private Documentation Protection[​](https://apiato.io/docs/pacakges/documentation#private-docs-protection) <a href="#private-docs-protection" id="private-docs-protection"></a>
 
-By default, this feature is **disabled** in local environment and **enabled** in production.\
-To change this behaviour [Publish the configs](https://apiato.io/docs/pacakges/documentation#publishing-configs) and change `protect-private-docs`.
+By default, this feature is **disabled** in the local environment and **enabled** in production.\
+To change this behaviour [Publish the configs](broken-reference) and change `protect-private-docs`.
 
-Private documentations route is protected with the `auth:web` middleware. You can grant users access to the protected docs by updating `access-private-docs-roles` & `access-private-docs-permission` values in documentation config. By default, users need `access-private-docs` permission to access private docs.
+The private documentation route is protected with the `auth:web` middleware. You can grant users access to the protected docs by updating `access-private-docs-roles` & `access-private-docs-permission` values in documentation config. By default, users need `access-private-docs` permission to access private docs.
 
 #### Edit Default Generated Values in Templates[​](https://apiato.io/docs/pacakges/documentation#edit-default-generated-values-in-templates) <a href="#edit-default-generated-values-in-templates" id="edit-default-generated-values-in-templates"></a>
 
-Mustang by defaults generates 2 API documentations, each one has its own `apidoc.json` file. Both can be modified from the Documentation Container in `app/Containers/Vendor/Documentation/ApiDocJs` and need Source code modification.
+Mustang by default generates 2 API documentation, each one has its own `apidoc.json` file. Both can be modified from the Documentation Container as `app/Containers/Vendor/Documentation/ApiDocJs` and need Source code modification.
 
 #### Edit the Documentation Header[​](https://apiato.io/docs/pacakges/documentation#edit-the-documentation-header) <a href="#edit-the-documentation-header" id="edit-the-documentation-header"></a>
 
-The header is usually the Overview of your API. It contains Info about authenticating users, making requests, responses, potential errors, rate limiting, pagination, query parameters and anything you want.
+The header is usually the Overview of your API. It contains Info about authenticating users, making requests, responses, potential errors, rate limiting, pagination, query parameters, and anything you want.
 
-All this information is written in `app/Containers/Vendor/Documentation/ApiDocJs/shared/header.template.en.md` file, and the same file is used as header for both private and public documentations.
+All this information is written in `app/Containers/Vendor/Documentation/ApiDocJs/shared/header.template.en.md` file, and the same file is used as a header for both private and public documentation.
 
-To edit its content you need to modify its source code and open the markdown file in any markdown editor and edit it.
+To edit its content you need to modify its source code open the markdown file in any markdown editor and edit it.
 
 You will notice some variables like `{{rate-limit}}` and `{{token-expires}}`. Those are replaced when running `mustang:apidoc` with real values from your application configuration files.
 
@@ -217,6 +217,6 @@ There will be some `header.template.{locale}.md` files in the folder.
 
 You can change the language by adding `APIDOC_LOCALE=ru` to the `.env` file.
 
-If you didn't find a file with your locale, you can create it. You need to modify its source code and create new file like `header.template.cn.md`
+If you didn't find a file with your locale, you can create it. You need to modify its source code and create a new file like `header.template.cn.md`
 
 \
